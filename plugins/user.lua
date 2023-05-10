@@ -12,5 +12,9 @@ return {
   {
     "sitiom/nvim-numbertoggle",
     event = "VeryLazy"
+  },
+  {
+    "tpope/vim-surround",
+    event = "VeryLazy"
   }
 }
