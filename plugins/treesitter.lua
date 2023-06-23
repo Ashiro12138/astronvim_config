@@ -7,7 +7,8 @@ return {
       "vimdoc",
       "javascript",
       "typescript",
-      "python"
+      "python",
+      "svelte"
     })
   end,
 }

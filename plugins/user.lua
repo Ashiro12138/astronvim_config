@@ -15,6 +15,10 @@ return {
   },
   {
     "tpope/vim-surround",
-    event = "VeryLazy"
+    event = "BufEnter"
+  },
+  {
+    "terryma/vim-multiple-cursors",
+    event = "BufEnter"
   }
 }
