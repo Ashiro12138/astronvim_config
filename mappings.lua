@@ -26,7 +26,12 @@ return {
     ["<leader>r"] = {
       function() vim.lsp.buf.format() end,
       desc = "Format buffer",
-    }
+    },
+    ["x"] = { '"_x' },
+    ["X"] = { '"_X' },
+    ["s"] = { '"_s' },
+    ["S"] = { '"_S' },
+    ["<Del>"] = { '"_x' },
   },
   t = {
     -- setting a mapping to false will disable it
@@ -34,6 +39,11 @@ return {
   },
   v = {
     ["p"] = { "pgvy" },
-    ["P"] = { "Pgvy" }
+    ["P"] = { "Pgvy" },
+    ["x"] = { '"_x' },
+    ["X"] = { '"_X' },
+    ["s"] = { '"_s' },
+    ["S"] = { '"_S' },
+    ["<Del>"] = { '"_x' },
   }
 }
