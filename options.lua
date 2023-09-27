@@ -7,7 +7,12 @@ return {
     spell = true,          -- sets vim.opt.spell
     signcolumn = "auto",   -- sets vim.opt.signcolumn to auto
     wrap = false,          -- sets vim.opt.wrap
-    clipboard = ""         -- sets vim.opt.clipboard
+    clipboard = "",         -- sets vim.opt.clipboard
+    tabstop = 4,
+    shiftwidth = 4,
+    softtabstop = 4,
+    expandtab = true,
+    smartindent = true,
   },
   g = {
     mapleader = " ",                 -- sets vim.g.mapleader
