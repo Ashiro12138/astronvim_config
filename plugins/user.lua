@@ -18,11 +18,53 @@ return {
     event = "VeryLazy"
   },
   {
-    "tpope/vim-surround",
-    event = "BufEnter"
+    "kylechui/nvim-surround",
+    event = "VeryLazy"
   },
   {
-    "terryma/vim-multiple-cursors",
-    event = "BufEnter"
+    "Wansmer/treesj",
+    keys = {
+      {
+        "<leader>m",
+        "<CMD>TSJToggle<CR>",
+        desc = "Toggle Treesitter Join",
+      }
+    },
+    cmd = { "TSJToggle", "TSJSplit", "TSJJoin" },
+    opts = { use_default_keymaps = false },
+    event = "VeryLazy"
+  },
+  {
+    "f-person/git-blame.nvim",
+    keys = {
+      {
+        '<leader>gT',
+        "<CMD>GitBlameToggle<CR>",
+        desc="Toggle Git Blame",
+      },
+    },
+    event = "VeryLazy",
+  },
+  {
+    "mxsdev/nvim-dap-vscode-js",
+    requires = { "mfussenegger/nvim-dap" },
+    event = "VeryLazy"
+  },
+  {
+    "David-Kunz/jester",
+    event = "VeryLazy"
+  },
+  {
+    'echasnovski/mini.nvim',
+    event = "VeryLazy",
+    version = false,
+    config = function()
+      require('mini.move').setup()
+      require('mini.cursorword').setup()
+    end,
+  },
+  {
+    'kevinhwang91/nvim-bqf',
+    event = "VeryLazy"
   }
 }
