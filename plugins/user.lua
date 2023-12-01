@@ -33,8 +33,7 @@ return {
     cmd = { "TSJToggle", "TSJSplit", "TSJJoin" },
     opts = { use_default_keymaps = false },
     event = "VeryLazy"
-  },
-  {
+  }, {
     "f-person/git-blame.nvim",
     keys = {
       {
@@ -44,6 +43,9 @@ return {
       },
     },
     event = "VeryLazy",
+    config = function()
+      vim.g.gitblame_date_format = '%r • %x'
+    end,
   },
   {
     "mxsdev/nvim-dap-vscode-js",
@@ -61,10 +63,41 @@ return {
     config = function()
       require('mini.move').setup()
       require('mini.cursorword').setup()
+      require('mini.animate').setup({
+        cursor = {
+          timing = function() return 4 end
+        },
+        scroll = {
+          timing = function() return 4 end
+        },
+        resize = {
+          enable = false
+        },
+        open = {
+          enable = false
+        },
+        close = {
+          enable = false
+        }
+      })
     end,
   },
   {
     'kevinhwang91/nvim-bqf',
     event = "VeryLazy"
+  },
+  {
+    'kristijanhusak/vim-carbon-now-sh',
+    event = "VeryLazy",
+    config = function()
+      -- vim.g.carbon_now_sh_base_url = 'http://localhost:3000'
+      vim.api.nvim_set_keymap('v', '<M-p>', ':CarbonNowSh<CR>', {noremap = true})
+    end
+  },
+  {
+    "junegunn/fzf",
+    event = "VeryLazy",
+    dir = "~/.fzf",
+    build = "./install --all",
   }
 }
