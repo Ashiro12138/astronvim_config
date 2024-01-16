@@ -11,10 +11,9 @@ return {
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
-        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr)
-          require("astronvim.utils.buffer").close(
-            bufnr)
-        end)
+        require("astronvim.utils.status").heirline.buffer_picker(
+          function(bufnr) require("astronvim.utils.buffer").close(bufnr) end
+        )
       end,
       desc = "Pick to close",
     },
@@ -24,7 +23,7 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<leader>r"] = {
-      function() vim.lsp.buf.format() end,
+      function() vim.lsp.buf.format { timeout = 2000 } end,
       desc = "Format buffer",
     },
     ["x"] = { '"_x' },
@@ -34,7 +33,7 @@ return {
     ["<Del>"] = { '"_x' },
     -- Change tabs
     ["<C-n>"] = { "<cmd>bn<cr>", desc = "Next buffer" },
-    ["<C-p>"] = { "<cmd>bp<cr>", desc = "Previous buffer" }
+    ["<C-p>"] = { "<cmd>bp<cr>", desc = "Previous buffer" },
   },
   t = {
     -- setting a mapping to false will disable it
@@ -48,5 +47,5 @@ return {
     ["s"] = { '"_s' },
     ["S"] = { '"_S' },
     ["<Del>"] = { '"_x' },
-  }
+  },
 }

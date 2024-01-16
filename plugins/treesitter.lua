@@ -8,7 +8,7 @@ return {
       "javascript",
       "typescript",
       "python",
-      "svelte"
+      "svelte",
     })
   end,
 }
