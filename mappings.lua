@@ -23,7 +23,7 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<leader>r"] = {
-      function() vim.lsp.buf.format { timeout = 2000 } end,
+      function() vim.lsp.buf.format() end,
       desc = "Format buffer",
     },
     ["x"] = { '"_x' },
