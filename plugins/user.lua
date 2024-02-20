@@ -62,23 +62,23 @@ return {
     config = function()
       require("mini.move").setup()
       require("mini.cursorword").setup()
-      require("mini.animate").setup {
-        cursor = {
-          timing = function() return 4 end,
-        },
-        scroll = {
-          timing = function() return 4 end,
-        },
-        resize = {
-          enable = false,
-        },
-        open = {
-          enable = false,
-        },
-        close = {
-          enable = false,
-        },
-      }
+      -- require("mini.animate").setup {
+      --   cursor = {
+      --     timing = function() return 4 end,
+      --   },
+      --   scroll = {
+      --     timing = function() return 4 end,
+      --   },
+      --   resize = {
+      --     enable = false,
+      --   },
+      --   open = {
+      --     enable = false,
+      --   },
+      --   close = {
+      --     enable = false,
+      --   },
+      -- }
     end,
   },
   {
@@ -117,5 +117,13 @@ return {
         end,
       })
     end,
+  },
+  {
+    "mattkubej/jest.nvim",
+    event = "VeryLazy",
+  },
+  {
+    "mg979/vim-visual-multi",
+    event = "VeryLazy",
   },
 }
